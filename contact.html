@@ -1,0 +1,237 @@
+<html>
+<head>
+    <title>Pharma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="style.css"/>
+    <style>
+        .contact{
+            background-image: url(assets/contact.jpeg);
+            width:auto;
+            height:400px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .contact-containt{
+            display: flex;
+            justify-content: center;
+        }
+        .phone , .msg{
+            padding:20px;
+            background-color:#fff;
+            margin:25% 5% 0% 5%;
+            border:2px solid #ddd;
+        }
+        .feedback{
+            background-color:darkblue;
+            justify-content: center;
+            color:#fff;
+        }
+        .feedback-container{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .form-part{
+            padding:30px;
+            background-color: #fff;
+            color:#000;
+        }
+        textarea{
+            width: 500px;
+            height:150px;
+        }
+        .img-part , .form-part{
+           margin: 0px 0px 0px 0px;
+        }
+  .map {
+      text-align: center;
+        padding: 50px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #f8f8f8;
+    }
+    .g-map {
+        width: 200%;
+        max-width: 800px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    @media screen and (max-width: 860px) {
+        .g-map {
+            width: 100%;
+            height:auto;
+        }
+        .feedback-container{
+            display: block;
+        }
+    }
+
+    .map h1 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .map p {
+        font-size: 16px;
+        color: #555;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+       <section class="sec-1">
+        <div class="nav-bar">
+        <div class="side-nav">
+            <h2>Pharma</h2>
+        <nav class="sidenav">
+		<div id="nav-trigger" status="closed"><i class="fa fa-bars"></i></div>
+		<div id="navigation">
+			<h3>Pharma</h3>
+			<ul>
+               <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="Blog.html"><i class="fa fa-shopping-bag"></i>Products</a></li>
+                <li><a href="login.html"><i class="fa fa-user"></i>My Account</a></li>
+                 <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Cart</a></li>
+			</ul>
+		</div>
+	</nav>
+            </div>
+            <nav class="normal-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                       <li class="dropdown">
+                            <button class="dropbtn">Shop 
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="#">Cart</a>
+                              <a href="#">Product Variation</a>
+                              <a href="#">My Account</a>
+                            </div>
+                        </li>
+                    <li><a href="">Track Order</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#search-bar" title="Search"><i class="fa fa-search"  style="font-size:20px"></i></a></li>
+                    <li><a href="login.html" title="Login/Register"><i class="fa fa-user"  style="font-size:20px"></i></a></li>
+                    <li><a href="" title="Cart"><i class="fa fa-shopping-cart"  style="font-size:20px"></i></a></li>
+                </ul>    
+            </nav>
+        </div>
+        <header>
+            <center>FREE SHIPPING ON ALL ORDERS OVER $75.00. LEARN MORE!</center>
+        </header>
+    </section>
+    <section class="contact">
+        <div class="contact-containt">
+            <div class="phone">
+                <center>
+                  <i class="fa fa-phone icon" style="font-size:40px;"></i>
+                  <h5>Talk to Sale</h5>
+                    <p>Just Pick up your phone to talk with sales team</p>
+                    <a href="" style="text-decoration: none;color:blue">+91 91929-39495</a>
+                </center>
+            </div>
+            <div class="msg">
+                <center>
+                    <i class='fa fa-comment icon' style='font-size:36px'></i>
+                    <h5>Contact Customer Support</h5>
+                    <p>Sometimes you need little help form your friends.<br> We are here for you...</p>
+                </center>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br><br>
+    
+    <section class="feedback">
+    <div class="feedback-container">
+        <div class="img-part">
+            <img src="assets/feedback.jpeg" alt="Feedback Image" style="width: 100%; border-radius: 10px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);">
+        </div>
+        <div class="form-part">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h1>Contact Us</h1>
+
+                <label for="Name">Name:</label>
+                <input type="text" placeholder="Your Name" id="Name" style="width:100%; padding: 10px; box-sizing: border-box; margin-bottom: 15px;" required>
+
+                <label for="Email">Email:</label>
+                <input type="email" placeholder="Your Email" id="Email" style="width:100%; padding: 10px; box-sizing: border-box; margin-bottom: 15px;" required>
+
+                <label for="Phone">Phone:</label>
+                <input type="text" placeholder="Your Phone" id="Phone" style="width:100%; padding: 10px; box-sizing: border-box; margin-bottom: 15px;" maxlength="10" required>
+
+                <label for="message">Feedback:</label>
+                <textarea placeholder="Enter your Feedback" id="message" style="width:100%; padding: 10px; box-sizing: border-box; margin-bottom: 15px;"></textarea>
+
+                <div class="button-group">
+                    <input type="submit" value="Submit" style="background-color: #fc634a; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: 0.3s;">
+                    <input type="reset" value="Reset" style="background-color: #555; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: 0.3s;">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+        <hr>
+      <center>
+    <h1><b>Location/Address</b></h1>
+</center>
+<section class="map">
+    <div class="g-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14962.651013631463!2d85.80185509657491!3d20.355546200000024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19091813dab8d5%3A0xa033051ccddbbcbc!2sKalinga%20Institute%20of%20Industrial%20Technology!5e0!3m2!1sen!2sin!4v1704707071453!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+        <footer>
+        <h1><center>@Pharma</center></h1>
+    </footer>
+    <!--Token of SMTP JS 12a08581-a068-482b-95b4-001713c4da99 -->
+    
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    // SMTP JS Password: A14EA0682C3BFDF6A3C4180E5812D1C9B4B0
+    function sendEmail() {
+            Email.send({
+                SecureToken : "12a08581-a068-482b-95b4-001713c4da99",
+                To : 'kinghjnpkkt@gmail.com',
+                From :'kinghjnpkkt@gmail.com',
+                
+                Subject : "New Contact for Enquiry",
+                
+                Body : "Myself &nbsp;" + document.getElementById("Name").value +","
+                + "<br><br> I hope this email finds you well. I'm interested in your Product and would like to know:<br><br>1.Availability in your inventory <br>2.Pricing details, including any discounts<br>3.Minimum order quantity (MOQ)<br>4.Shipping options and costs<br>5.Payment terms<br><br>Additionally, please share information on upcoming promotions, new releases, or bulk order discounts. Kindly provide details at your earliest convenience. <br><br> Thank you.<br><br>" 
+                + "<br> Contact Details<br><br>"
+                + "Email:" + document.getElementById("Email").value
+                + "<br> Phone:" + document.getElementById("Phone").value
+                 + "<br> Message:" + document.getElementById("message").value
+            }).then(
+              message => alert(message)
+            );
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#nav-trigger").click(function(){
+            var status = $(this).attr("status");
+            
+            if(status == "closed"){
+                $(".sidenav").removeClass("slideout").addClass("slidein");
+                $(this).attr("status", "open").find("i").removeClass("fa-bars").addClass("fa-times");
+            } else {
+                $(".sidenav").removeClass("slidein").addClass("slideout");
+                $(this).attr("status", "closed").find("i").removeClass("fa-times").addClass("fa-bars");
+            }
+        });
+    });
+</script>
+ </body>
+</html>

@@ -1,0 +1,438 @@
+<html>
+<head>
+    <title>Pharma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="style.css"/>
+    <style>
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.item-1 {
+    background-image: url(assets/med-1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.item-1 a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background: #ff5757;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.item-1 a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.text-part {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.item-1 h1 {
+    color: #fff;
+    margin: 10px;
+}
+
+.item-2 {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+}
+
+.sub-item-1,
+.sub-item-2 {
+    flex: 1;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+}
+.sub-item-1{
+    background-image: url(assets/med-2.jpg);
+}
+.sub-item-2{
+    background-image: url(assets/med-3.jpg);
+}
+.sub-item-1 a,
+.sub-item-2 a {
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background: #5ca4ff;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.sub-item-1 a:hover,
+.sub-item-2 a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.sub-item-1 h1,
+.sub-item-2 h1 {
+    color: #fff;
+    margin: 10px;
+}
+
+
+       .med {
+    padding: 20px;
+}
+
+.sub-med .card {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.text h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text h5 {
+    color: #666;
+}
+
+.card .text button {
+    padding: 10px 30px;
+    background-color: #fc634a;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card .text button:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+/* Mobile-friendly styles */
+@media screen and (max-width: 860px) {
+    .med .sub-med .card {
+        flex-direction: column;
+    }
+
+    .med .sub-med .card .img {
+        text-align: center;
+    }
+}
+/* Media query for mobile screens */
+@media screen and (max-width: 860px) {
+    .item-1 {
+        height: 300px;
+    }
+
+    .item-1 a,
+    .sub-item-1 a,
+    .sub-item-2 a {
+        padding: 8px 16px;
+    }
+
+    .text-part {
+        padding: 8px;
+    }
+
+    .sub-item-1,
+    .sub-item-2 {
+        height: 150px;
+    }
+}
+    </style>
+</head>
+<body>
+       <section class="sec-1">
+        <div class="nav-bar">
+        <div class="side-nav">
+            <h2>Pharma</h2>
+        <nav class="sidenav">
+		<div id="nav-trigger" status="closed"><i class="fa fa-bars"></i></div>
+		<div id="navigation">
+			<h3>Pharma</h3>
+			<ul>
+               <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="Blog.html"><i class="fa fa-shopping-bag"></i>Products</a></li>
+                <li><a href="login.html"><i class="fa fa-user"></i>My Account</a></li>
+                 <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Cart</a></li>
+			</ul>
+		</div>
+	</nav>
+            </div>
+            <nav class="normal-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                       <li class="dropdown">
+                            <button class="dropbtn">Shop 
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="#">Cart</a>
+                              <a href="#">Product Variation</a>
+                              <a href="#">My Account</a>
+                            </div>
+                        </li>
+                    <li><a href="">Track Order</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#search-bar" title="Search"><i class="fa fa-search"  style="font-size:20px"></i></a></li>
+                    <li><a href="login.html" title="Login/Register"><i class="fa fa-user"  style="font-size:20px"></i></a></li>
+                    <li><a href="" title="Cart"><i class="fa fa-shopping-cart"  style="font-size:20px"></i></a></li>
+                </ul>    
+            </nav>
+        </div>
+        <header>
+            <center>FREE SHIPPING ON ALL ORDERS OVER $75.00. LEARN MORE!</center>
+        </header>
+    </section>
+    <section class="blog">
+        <div class="item-1">
+            <div class="text-part">
+                <a href="https://www.pennmedicine.org/updates/blogs">Click here to Explore</a>
+                <h1>Medicine Blog</h1>
+            </div>
+        </div>
+        <div class="item-2">
+            <div class="sub-item-1">
+                <div class="text-part-1">
+                <a href="https://ayurvaid.com/blog/">Click here to Explore</a>
+                <h1>Ayurveda Blog</h1>
+            </div>
+            </div>
+            <div class="sub-item-2">
+                <div class="text-part-2">
+                <a href="https://iamafoodblog.com/">Click here to Explore</a>
+                <h1>Food Blog</h1>
+            </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <marquee behavior="alternate"><h3><b style="color: red;">Breaking News:</b> Get Latest Medicine Updates.</h3></marquee>
+    <hr>
+    <section class="med">
+        <h2 style="background:#000; color:#fff;"><b style="margin-left: 10px;">Some Commonly Used Medications</b></h2>
+        <div class="sub-med">
+            <div class="card">
+                <div class="img">
+                    <img src="assets/med-4.jpg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Paraceramol</b></h3>
+                    <h5><b>Uses:</b><br>Paracetamol is a medicine used to treat mild to moderate pain. Paracetamol can also be used to treat fever (high temperature). It's dangerous to take more than the recommended dose of paracetamol. Paracetamol overdose can damage your liver and cause death.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+              <div class="card">
+                <div class="img">
+                    <img src="assets/med-5.jpg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Ibuprofen</b></h3>
+                    <h5><b>Uses:</b><br>Nonprescription ibuprofen is used to reduce fever and to relieve minor aches and pain from headaches, muscle aches, arthritis, menstrual periods, the common cold, toothaches, and backaches. Ibuprofen is in a class of medications called NSAIDs.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+              <div class="card">
+                <div class="img">
+                    <img src="assets/med-6.jpeg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Pantoprazole</b></h3>
+                    <h5><b>Uses:</b><br>Pantoprazole is a type of medicine called a proton pump inhibitor (PPI). Proton pumps are enzymes in the lining of your stomach that help it make acid to digest your food. Pantoprazole prevents proton pumps from working properly. This reduces the amount of acid the stomach makes.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+                <div class="card">
+                <div class="img">
+                    <img src="assets/med-7.jpg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Azithromycin</b></h3>
+                    <h5><b>Uses:</b><br>Azithromycin is an antibiotic medicine. It's used to treat infections including: chest infections such as pneumonia. ear, nose and throat and nose infections such as sinus infection (sinusitis)</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="card">
+                <div class="img">
+                    <img src="assets/med-8.jpg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Amoxicillin</b></h3>
+                    <h5><b>Uses:</b><br>It is used to treat bacterial infections, such as chest infections (including pneumonia) and dental abscesses. It can also be used together with other antibiotics and medicines to treat stomach ulcers. It's often prescribed for children, to treat ear infections and chest infections.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="card">
+                <div class="img">
+                    <img src="assets/med-9.jpeg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Levothyroxine</b></h3>
+                    <h5><b>Uses:</b><br>Levothyroxine is a medicine used to treat an underactive thyroid gland (hypothyroidism). The thyroid gland makes thyroid hormones which help to control energy levels and growth. Levothyroxine is taken to replace the missing thyroid hormone thyroxine.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="card">
+                <div class="img">
+                    <img src="assets/med-10.jpg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Propranolol</b></h3>
+                    <h5><b>Uses:</b><br>Propranolol is a type of medicine called a beta blocker. Like other beta blockers, propranolol works by changing the way your body responds to some nerve impulses, including in the heart. It slows down your heart rate and makes it easier for your heart to pump blood around your body.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="card">
+                <div class="img">
+                    <img src="assets/med-11.jpg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Ramipril</b></h3>
+                    <h5><b>Uses:</b><br>Ramipril is an angiotensin-converting enzyme (ACE) inhibitor. It works by blocking a substance in the body that causes blood vessels to tighten. As a result, ramipril relaxes the blood vessels. This lowers blood pressure and increases the supply of blood and oxygen to the heart.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="card">
+                <div class="img">
+                    <img src="assets/med-12.jpeg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Metformin</b></h3>
+                    <h5><b>Uses:</b><br>Metformin, classified as a biguanide drug, effectively lowers blood glucose levels by decreasing glucose production in the liver, diminishing intestinal absorption, and enhancing insulin sensitivity. As a result, metformin effectively lowers both basal and postprandial blood glucose levels</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="card">
+                <div class="img">
+                    <img src="assets/med-13.jpg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Amlodipine</b></h3>
+                    <h5><b>Uses:</b><br>Amlodipine is a calcium channel blocker. It works by affecting the movement of calcium into the cells of the heart and blood vessels. This relaxes the blood vessels and lowers blood pressure, and increases the supply of blood and oxygen to the heart while reducing its workload.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="card">
+                <div class="img">
+                    <img src="assets/med-14.jpeg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Furosemide</b></h3>
+                    <h5><b>Uses:</b><br>Furosemide is a loop diuretic that has been in use for decades. The Food and Drug Administration (FDA) has approved furosemide to treat conditions with volume overload and edema secondary to congestive heart failure exacerbation, liver failure, or renal failure, including the nephrotic syndrome.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="card">
+                <div class="img">
+                    <img src="assets/med-15.jpg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Prednisolonel</b></h3>
+                    <h5><b>Uses:</b><br>Prednisolone is a steroid medication that treats conditions like asthma, allergic reactions, arthritis and inflammatory bowel disease. It decreases inflammation, slows down an overactive immune system or replaces cortisol in your body. Brand names of this medication are Millipred® and Prednoral®.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="card">
+                <div class="img">
+                    <img src="assets/med-16.jpeg" width="300px" height="300px">
+                </div>
+                <div class="text">
+                    <h3 style="color: #000;"><b>Carbimazole</b></h3>
+                    <h5><b>Uses:</b><br>Carbimazole is a medicine used to treat an overactive thyroid (hyperthyroidism). This is when your thyroid gland makes too many thyroid hormones. Your thyroid controls things like your heart rate and body temperature.</h5>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+    
+            <footer>
+        <h1><center>@Pharma</center></h1>
+    </footer>
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#nav-trigger").click(function(){
+            var status = $(this).attr("status");
+            
+            if(status == "closed"){
+                $(".sidenav").removeClass("slideout").addClass("slidein");
+                $(this).attr("status", "open").find("i").removeClass("fa-bars").addClass("fa-times");
+            } else {
+                $(".sidenav").removeClass("slidein").addClass("slideout");
+                $(this).attr("status", "closed").find("i").removeClass("fa-times").addClass("fa-bars");
+            }
+        });
+    });
+</script>
+    </body>
+</html>

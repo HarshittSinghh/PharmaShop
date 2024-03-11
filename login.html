@@ -1,0 +1,170 @@
+<html>
+<head>
+    <title>Pharma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="style.css"/>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            background: linear-gradient(to right, #fc634a, #ff845c);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px 10px 0 0;
+        }
+
+        h1, h4, h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .signup {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .icon {
+            padding: 10px;
+            color: #fff;
+            background: linear-gradient(to right, #fc634a, #ff845c);
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: -30px;
+            z-index: 1;
+            position: relative;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            height: 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            border: none;
+            padding: 15px 40px;
+            cursor: pointer;
+            background: linear-gradient(to right, #fc634a, #ff845c);
+            color: #fff;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #ff845c, #fc634a);
+        }
+    </style>
+</head>
+<body>
+         <section class="sec-1">
+        <div class="nav-bar">
+        <div class="side-nav">
+            <h2>Pharma</h2>
+        <nav class="sidenav">
+		<div id="nav-trigger" status="closed"><i class="fa fa-bars"></i></div>
+		<div id="navigation">
+			<h3>Pharma</h3>
+			<ul>
+               <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="Blog.html"><i class="fa fa-shopping-bag"></i>Products</a></li>
+                <li><a href="login.html"><i class="fa fa-user"></i>My Account</a></li>
+                 <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Cart</a></li>
+			</ul>
+		</div>
+	</nav>
+            </div>
+            <nav class="normal-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                       <li class="dropdown">
+                            <button class="dropbtn">Shop 
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="#">Cart</a>
+                              <a href="#">Product Variation</a>
+                              <a href="#">My Account</a>
+                            </div>
+                        </li>
+                    <li><a href="">Track Order</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#search-bar" title="Search"><i class="fa fa-search"  style="font-size:20px"></i></a></li>
+                    <li><a href="login.html" title="Login/Register"><i class="fa fa-user"  style="font-size:20px"></i></a></li>
+                    <li><a href="" title="Cart"><i class="fa fa-shopping-cart"  style="font-size:20px"></i></a></li>
+                </ul>    
+            </nav>
+        </div>
+        <header>
+            <center>FREE SHIPPING ON ALL ORDERS OVER $75.00. LEARN MORE!</center>
+        </header>
+        </section>
+    <section class="login">
+        <div class="title">
+            <center><h1>My Account</h1></center>
+            <center><h4>Home / My Account</h4></center>
+        </div>
+        <center><h3>Login</h3></center>
+        <div style="padding:50px 30px;">
+            <center>
+            <form >
+                
+                <i class="fa fa-envelope icon" ></i><input type="email" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email" required /><br><br>
+                
+                
+                <i class="fa fa-key icon" ></i><input type="password" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password" required /><br><br>
+                
+                <input type="checkbox"> Remember Me<br><br>
+                <input type="submit" value="Sign up"><br><br><br>
+                <a href="signup.html">Create an Account</a>
+            </form>
+            </center>
+        </div>
+    </section>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#nav-trigger").click(function(){
+            var status = $(this).attr("status");
+            
+            if(status == "closed"){
+                $(".sidenav").removeClass("slideout").addClass("slidein");
+                $(this).attr("status", "open").find("i").removeClass("fa-bars").addClass("fa-times");
+            } else {
+                $(".sidenav").removeClass("slidein").addClass("slideout");
+                $(this).attr("status", "closed").find("i").removeClass("fa-times").addClass("fa-bars");
+            }
+        });
+    });
+</script>
+ </body>
+    
+</html>
